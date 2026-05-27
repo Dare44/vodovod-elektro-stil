@@ -1,116 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="sl">
 <head>
 <title>Vodovod Elektro Stil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-
 body{
-font-family: Arial;
-margin:0;
+    font-family:'Segoe UI', sans-serif;
+    margin:0;
+    background:#f3f4f6;
+    color:#111827;
 }
 
 header{
-background:#1f2937;
-color:white;
-padding:20px;
-text-align:center;
+    background:#111827;
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:36px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
 }
 
 nav{
-background:#374151;
-padding:10px;
-text-align:center;
+    background:#1f2937;
+    padding:16px;
+    text-align:center;
 }
 
 nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
+    color:white;
+    margin:18px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:17px;
+}
+
+nav a:hover{
+    color:#f59e0b;
 }
 
 .hero{
-padding:120px 20px;
-text-align:center;
-color:white;
-background-image:url("images/hero.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-min-height:400px;
+    padding:120px 20px;
+    text-align:center;
+    color:white;
+    background-image:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/hero.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:420px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h2{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn-primary{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:15px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    margin:8px;
+}
+
+.btn-secondary{
+    display:inline-block;
+    background:transparent;
+    color:white;
+    padding:15px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    border:2px solid white;
+    font-weight:bold;
+    margin:8px;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:#111827;
 }
 
 .services{
-display:flex;
-justify-content:center;
-gap:40px;
-padding:40px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:60px 20px;
+    flex-wrap:wrap;
 }
 
 .service-box{
-background:white;
-padding:20px;
-width:250px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+    background:white;
+    padding:30px;
+    width:260px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    transition:0.3s;
+    text-align:center;
+}
+
+.service-box:hover{
+    transform:translateY(-6px);
+}
+
+.service-box h3{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.why{
+    background:white;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.why h2{
+    font-size:40px;
+    margin-bottom:40px;
 }
 
 footer{
-background:#1f2937;
-color:white;
-text-align:center;
-padding:20px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
 }
 
+@media(max-width:768px){
+    .hero h2{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    nav a{
+        display:block;
+        margin:12px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Vodovod Elektro Stil</h1>
-<p>Elektro, vodovodne in hišniške storitve</p>
+    <h1>Vodovod Elektro Stil</h1>
+    <p>Elektro, vodovodne in hišniške storitve</p>
 </header>
 
 <nav>
-<a href="#">Domov</a>
-<a href="#">Elektro</a>
-<a href="#">Vodovod</a>
-<a href="#">Hišniška dela</a>
-<a href="#">Kontakt</a>
+    <a href="#">Domov</a>
+    <a href="#">Elektro</a>
+    <a href="#">Vodovod</a>
+    <a href="#">Hišniška dela</a>
+    <a href="#kontakt">Kontakt</a>
 </nav>
 
-<section class="hero" style="padding:120px 20px; text-align:center; color:white; background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/hero.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; min-height:400px; display:flex; flex-direction:column; justify-content:center; align-items:center;"><h2>VODOVOD • ELEKTRO • HIŠNIŠKA DELA</h2>
-<p>Hitra in zanesljiva popravila v Ljubljani in okolici.</p>
-<br>
-<a href="tel:031705782" 
-style="background:#2563eb;color:white;padding:15px 25px;text-decoration:none;border-radius:5px;font-weight:bold;">
-📞 Pokliči za termin
-</a>
+<section class="hero">
+    <h2>VODOVOD • ELEKTRO • HIŠNIŠKA DELA</h2>
+    <p>Hitra in zanesljiva popravila v Ljubljani in okolici.</p>
+
+    <div>
+        <a href="tel:031705782" class="btn-primary">📞 Pokliči za termin</a>
+        <a href="#kontakt" class="btn-secondary">Pošlji povpraševanje</a>
+    </div>
 </section>
 
 <section class="services">
+    <div class="service-box">
+        <h3>Elektro</h3>
+        <p>Montaža luči, vtičnic, stikal in manjša elektro popravila.</p>
+    </div>
 
-<div class="service-box">
-<h3>Elektro</h3>
-<p>Montaža luči, vtičnic, popravila instalacij.</p>
-</div>
+    <div class="service-box">
+        <h3>Vodovod</h3>
+        <p>Menjava pipe, ventilov, sifonov in popravila puščanja.</p>
+    </div>
 
-<div class="service-box">
-<h3>Vodovod</h3>
-<p>Menjava pipe, ventilov in popravila puščanja.</p>
-</div>
-
-<div class="service-box">
-<h3>Hišniška dela</h3>
-<p>Manjša popravila in montaže v stanovanju.</p>
-</div>
-
+    <div class="service-box">
+        <h3>Hišniška dela</h3>
+        <p>Manjša popravila, montaže in vzdrževanje stanovanj ali objektov.</p>
+    </div>
 </section>
 
-<footer>
-<p>Kontakt: 031 705 782</p>
+<section class="why">
+    <h2>Zakaj izbrati nas?</h2>
+
+    <div class="services">
+        <div class="service-box">
+            <h3>⚡ Hiter odziv</h3>
+            <p>Na povpraševanja odgovorimo hitro in se dogovorimo za termin.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>🛠 Profesionalna izvedba</h3>
+            <p>Delo opravimo čisto, natančno in zanesljivo.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>📍 Ljubljana in okolica</h3>
+            <p>Na voljo smo za manjša in večja popravila v Ljubljani in okolici.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="kontakt">
+    <p>Kontakt: 031 705 782</p>
+    <p>Pokličite za termin ali pošljite povpraševanje.</p>
 </footer>
 
 </body>
