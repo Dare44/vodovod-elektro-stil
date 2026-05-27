@@ -1,474 +1,83 @@
-<!DOCTYPE html>
-<html lang="sl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Elektro & Vodovod Stil</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Segoe UI',sans-serif;
-background:#f3f4f6;
-color:#111827;
-line-height:1.6;
-}
-
-/* HEADER */
-
-header{
-background:#111827;
-padding:25px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
-color:white;
-font-size:30px;
-font-weight:bold;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:30px;
-font-weight:600;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#f59e0b;
-}
-
-/* HERO */
-
-.hero{
-height:85vh;
-background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('images/hero.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-max-width:900px;
-color:white;
-}
-
-.hero h1{
-font-size:68px;
-margin-bottom:20px;
-line-height:1.1;
-}
-
-.hero p{
-font-size:24px;
-margin-bottom:40px;
-color:#e5e7eb;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn-primary{
-background:#f59e0b;
-color:white;
-padding:16px 32px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
-transition:0.3s;
-}
-
-.btn-primary:hover{
-background:#d97706;
-}
-
-.btn-secondary{
-border:2px solid white;
-color:white;
-padding:16px 32px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
-transition:0.3s;
-}
-
-.btn-secondary:hover{
-background:white;
-color:#111827;
-}
-
-/* SERVICES */
-
-.services{
-padding:90px 20px;
-max-width:1300px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title h2{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.section-title p{
-font-size:20px;
-color:#6b7280;
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.service-box{
-background:white;
-padding:40px 30px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.service-box:hover{
-transform:translateY(-8px);
-}
-
-.service-box h3{
-font-size:28px;
-margin-bottom:15px;
-}
-
-.service-box p{
-color:#6b7280;
-}
-
-/* WHY US */
-
-.why{
-background:#111827;
-padding:90px 20px;
-color:white;
-}
-
-.why-container{
-max-width:1200px;
-margin:auto;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.why-box{
-background:#1f2937;
-padding:35px;
-border-radius:16px;
-}
-
-.why-box h3{
-margin-bottom:15px;
-font-size:24px;
-}
-
-/* PRODUCTS */
-
-.products{
-padding:90px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.product-box{
-background:white;
-padding:30px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.product-box h3{
-margin-top:15px;
-}
-
-/* CONTACT */
-
-.contact{
-background:#f9fafb;
-padding:90px 20px;
-text-align:center;
-}
-
-.contact h2{
-font-size:46px;
-margin-bottom:20px;
-}
-
-.contact p{
-font-size:22px;
-margin-bottom:30px;
-}
-
-.contact a{
-display:inline-block;
-background:#2563eb;
-color:white;
-padding:16px 32px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-font-size:20px;
-}
-
-/* FOOTER */
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:20px;
-}
-
-nav a{
-margin:10px;
-display:inline-block;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.section-title h2{
-font-size:36px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-Inštalacije Stil
-</div>
-
-<nav>
-<a href="#">Domov</a>
-<a href="#storitve">Storitve</a>
-<a href="#izdelki">Izdelki</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>
-ELEKTRO • VODOVOD • HIŠNIŠKA DELA
-</h1>
-
-<p>
-Specializirani za elektro in vodovodna dela ter hišniška popravila.
-</p>
-
-<div class="hero-buttons">
-
-<a href="tel:031705782" class="btn-primary">
-📞 Pokliči za termin
-</a>
-
-<a href="#kontakt" class="btn-secondary">
-Pošlji povpraševanje
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="services" id="storitve">
-
-<div class="section-title">
-<h2>Naše storitve</h2>
-<p>Hitro, zanesljivo in profesionalno izvedena dela.</p>
-</div>
-
-<div class="service-grid">
-
-<div class="service-box">
-<h3>⚡ Elektro dela</h3>
-<p>Montaža luči, vtičnic, stikal, LED razsvetljave in manjša elektro popravila.</p>
-</div>
-
-<div class="service-box">
-<h3>🚰 Vodovodna dela</h3>
-<p>Menjava pipe, ventilov, sifonov, odmaševanje in sanacija puščanja.</p>
-</div>
-
-<div class="service-box">
-<h3>🛠 Hišniška dela</h3>
-<p>Montaže, manjša popravila in vzdrževanje stanovanj ali poslovnih prostorov.</p>
-</div>
-
-<div class="service-box">
-<h3>💡 Montaže</h3>
-<p>Montaža luči, TV nosilcev, polic, kopalniške opreme in druge opreme.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="why">
-
-<div class="why-container">
-
-<div class="section-title">
-<h2 style="color:white;">Zakaj izbrati nas?</h2>
-<p style="color:#d1d5db;">Profesionalen pristop in hitro odzivanje.</p>
-</div>
-
-<div class="why-grid">
-
-<div class="why-box">
-<h3>⚡ Hiter odziv</h3>
-<p>Dogovorimo se hitro in pridemo ob dogovorjenem terminu.</p>
-</div>
-
-<div class="why-box">
-<h3>🛠 Profesionalna izvedba</h3>
-<p>Delo opravimo natančno, čisto in zanesljivo.</p>
-</div>
-
-<div class="why-box">
-<h3>📍 Ljubljana in okolica</h3>
-<p>Na voljo za manjša in večja dela v Ljubljani in okolici, po dogovoru tudi po drugih krajih Slovenije.</p>
-</div>
-
-<div class="why-box">
-<h3>📞 Enostaven kontakt</h3>
-<p>Telefon, SMS ali WhatsApp za hitro povpraševanje.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="products" id="izdelki">
-
-<div class="section-title">
-<h2>Izdelki in montaža</h2>
-<p>Možnost dobave materiala in profesionalne montaže.</p>
-</div>
-
-<div class="product-grid">
-
-<div class="product-box">
-<h3>Stikala</h3>
-<p>Klasična in moderna stikala različnih proizvajalcev.</p>
-</div>
-
-<div class="product-box">
-<h3>LED luči</h3>
-<p>Montaža in dobava notranje ter zunanje LED razsvetljave.</p>
-</div>
-
-<div class="product-box">
-<h3>Pametna stikala</h3>
-<p>WiFi stikala, senzorji in pametne rešitve za dom.</p>
-</div>
-
-<div class="product-box">
-<h3>Vodovodni material</h3>
-<p>Pipe, ventili, sifoni in ostali vodovodni elementi.</p>
-</div>
-
-</div>
-
-</section>
-
 <section class="contact" id="kontakt">
 
-<h2>Potrebujete popravilo ali montažo?</h2>
+<h2>Pošljite povpraševanje</h2>
 
 <p>
-Pokličite ali pošljite povpraševanje.
+Izpolnite obrazec in odgovorili vam bomo v najkrajšem možnem času.
 </p>
 
-<a href="tel:031705782">
+<form action="https://formsubmit.co/info@stilnat.com" method="POST" style="max-width:700px;margin:50px auto;text-align:left;">
+
+<input type="hidden" name="_subject" value="Novo povpraševanje - Stilnat">
+<input type="hidden" name="_captcha" value="false">
+
+<label style="font-weight:bold;">Ime in priimek *</label>
+
+<input 
+type="text" 
+name="Ime" 
+required
+placeholder="Vnesite ime"
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
+>
+
+<label style="font-weight:bold;">Email *</label>
+
+<input 
+type="email" 
+name="Email" 
+required
+placeholder="Vnesite email"
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
+>
+
+<label style="font-weight:bold;">Telefon</label>
+
+<input 
+type="tel" 
+name="Telefon"
+placeholder="Vnesite telefon"
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
+>
+
+<label style="font-weight:bold;">Storitev</label>
+
+<select 
+name="Storitev"
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
+>
+
+<option>Elektro dela</option>
+<option>Vodovodna dela</option>
+<option>Hišniška dela</option>
+<option>Montaže</option>
+<option>Drugo</option>
+
+</select>
+
+<label style="font-weight:bold;">Sporočilo *</label>
+
+<textarea 
+name="Sporočilo" 
+required
+rows="6"
+placeholder="Opišite vaše povpraševanje..."
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:25px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
+></textarea>
+
+<button 
+type="submit"
+style="background:#f59e0b;color:white;padding:18px 34px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer;"
+>
+
+Pošlji povpraševanje
+
+</button>
+
+</form>
+
+<p style="margin-top:40px;font-size:20px;">
 📞 031 705 782
-</a>
+</p>
 
 </section>
-
-<footer>
-
-<p>
-© 2026 Elektro & Vodovod Stil
-</p>
-
-</footer>
-
-</body>
-</html>
