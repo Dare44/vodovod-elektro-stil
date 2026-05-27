@@ -1,3 +1,364 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Inštalacije Stil</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f3f4f6;
+color:#111827;
+line-height:1.6;
+}
+
+header{
+background:#111827;
+padding:25px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+color:white;
+font-size:30px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:600;
+}
+
+nav a:hover{
+color:#f59e0b;
+}
+
+.hero{
+height:85vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('images/hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero h1{
+font-size:68px;
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:40px;
+color:#e5e7eb;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+background:#f59e0b;
+color:white;
+padding:16px 32px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+padding:16px 32px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+.services{
+padding:90px 20px;
+max-width:1300px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.section-title p{
+font-size:20px;
+color:#6b7280;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-box{
+background:white;
+padding:40px 30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.service-box h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.why{
+background:#111827;
+padding:90px 20px;
+color:white;
+}
+
+.why-container{
+max-width:1200px;
+margin:auto;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.why-box{
+background:#1f2937;
+padding:35px;
+border-radius:16px;
+}
+
+.products{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.product-box{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.contact{
+background:#f9fafb;
+padding:90px 20px;
+}
+
+.contact h2{
+font-size:46px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.contact p{
+font-size:22px;
+margin-bottom:30px;
+text-align:center;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:20px;
+}
+
+nav a{
+margin:10px;
+display:inline-block;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.section-title h2{
+font-size:36px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Inštalacije Stil
+</div>
+
+<nav>
+<a href="#">Domov</a>
+<a href="#storitve">Storitve</a>
+<a href="#izdelki">Izdelki</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+ELEKTRO • VODOVOD • HIŠNIŠKA DELA
+</h1>
+
+<p>
+Specializirani za elektro in vodovodna dela ter hišniška popravila.
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:031705782" class="btn-primary">
+📞 Pokliči za termin
+</a>
+
+<a href="#kontakt" class="btn-secondary">
+Pošlji povpraševanje
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="storitve">
+
+<div class="section-title">
+<h2>Naše storitve</h2>
+<p>Hitro, zanesljivo in profesionalno izvedena dela.</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service-box">
+<h3>⚡ Elektro dela</h3>
+<p>Montaža luči, vtičnic, stikal in manjša elektro popravila.</p>
+</div>
+
+<div class="service-box">
+<h3>🚰 Vodovodna dela</h3>
+<p>Menjava pipe, ventilov, odmaševanje in sanacija puščanja.</p>
+</div>
+
+<div class="service-box">
+<h3>🛠 Hišniška dela</h3>
+<p>Montaže, manjša popravila in vzdrževanje objektov.</p>
+</div>
+
+<div class="service-box">
+<h3>💡 Montaže</h3>
+<p>Montaža luči, TV nosilcev, polic in ostale opreme.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="why">
+
+<div class="why-container">
+
+<div class="section-title">
+<h2 style="color:white;">Zakaj izbrati nas?</h2>
+<p style="color:#d1d5db;">Profesionalen pristop in hitro odzivanje.</p>
+</div>
+
+<div class="why-grid">
+
+<div class="why-box">
+<h3>⚡ Hiter odziv</h3>
+<p>Dogovorimo se hitro in pridemo ob dogovorjenem terminu.</p>
+</div>
+
+<div class="why-box">
+<h3>🛠 Profesionalna izvedba</h3>
+<p>Delo opravimo natančno, čisto in zanesljivo.</p>
+</div>
+
+<div class="why-box">
+<h3>📍 Ljubljana in okolica</h3>
+<p>Na voljo za manjša in večja dela v Ljubljani in okolici, po dogovoru tudi po drugih krajih Slovenije.</p>
+</div>
+
+<div class="why-box">
+<h3>📞 Enostaven kontakt</h3>
+<p>Telefon, SMS ali WhatsApp za hitro povpraševanje.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="contact" id="kontakt">
 
 <h2>Pošljite povpraševanje</h2>
@@ -11,64 +372,28 @@ Izpolnite obrazec in odgovorili vam bomo v najkrajšem možnem času.
 <input type="hidden" name="_subject" value="Novo povpraševanje - Stilnat">
 <input type="hidden" name="_captcha" value="false">
 
-<label style="font-weight:bold;">Ime in priimek *</label>
+<label><strong>Ime in priimek *</strong></label>
 
-<input 
-type="text" 
-name="Ime" 
-required
-placeholder="Vnesite ime"
-style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
->
+<input type="text" name="Ime" required
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;">
 
-<label style="font-weight:bold;">Email *</label>
+<label><strong>Email *</strong></label>
 
-<input 
-type="email" 
-name="Email" 
-required
-placeholder="Vnesite email"
-style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
->
+<input type="email" name="Email" required
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;">
 
-<label style="font-weight:bold;">Telefon</label>
+<label><strong>Telefon</strong></label>
 
-<input 
-type="tel" 
-name="Telefon"
-placeholder="Vnesite telefon"
-style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
->
+<input type="tel" name="Telefon"
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;">
 
-<label style="font-weight:bold;">Storitev</label>
+<label><strong>Sporočilo *</strong></label>
 
-<select 
-name="Storitev"
-style="width:100%;padding:16px;margin-top:8px;margin-bottom:20px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
->
+<textarea name="Sporočilo" required rows="6"
+style="width:100%;padding:16px;margin-top:8px;margin-bottom:25px;border:1px solid #d1d5db;border-radius:10px;"></textarea>
 
-<option>Elektro dela</option>
-<option>Vodovodna dela</option>
-<option>Hišniška dela</option>
-<option>Montaže</option>
-<option>Drugo</option>
-
-</select>
-
-<label style="font-weight:bold;">Sporočilo *</label>
-
-<textarea 
-name="Sporočilo" 
-required
-rows="6"
-placeholder="Opišite vaše povpraševanje..."
-style="width:100%;padding:16px;margin-top:8px;margin-bottom:25px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;"
-></textarea>
-
-<button 
-type="submit"
-style="background:#f59e0b;color:white;padding:18px 34px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer;"
->
+<button type="submit"
+style="background:#f59e0b;color:white;padding:18px 34px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer;">
 
 Pošlji povpraševanje
 
@@ -76,8 +401,15 @@ Pošlji povpraševanje
 
 </form>
 
-<p style="margin-top:40px;font-size:20px;">
-📞 031 705 782
+</section>
+
+<footer>
+
+<p>
+© 2026 Inštalacije Stil
 </p>
 
-</section>
+</footer>
+
+</body>
+</html>
